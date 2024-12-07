@@ -1,0 +1,13 @@
+@import "../extra/card.css";
+
+body {
+  margin: 0;
+  background-color: green;
+}
+
+.cards {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, 2.5in);
+  margin: 1em;
+}

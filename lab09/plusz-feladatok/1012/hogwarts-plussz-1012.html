@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roxforti regisztrációs űrlap</title>
+    <link rel="stylesheet" href="hogwarts-styles.css" />
+    <script
+      type="text/javascript"
+      src="https://elearning.unideb.hu/KWmQyZN9KZ_-qUuLKMIPYXVlL930kMcjYpF9-ShzpiSFsolck-daGJRvQAh7F5LCihHJ1LoTfW8NuxZ4XvDLMQ=="
+    ></script>
+  </head>
+  <body>
+    <h1>Roxforti regisztrációs űrlap</h1>
+    <form
+      id="hogwarts-form"
+      class="fancy-form"
+      method="post"
+      enctype="multipart/form-data"
+      action="https://webhook.site/fb2b2881-5fe8-4148-b0ed-134ab8550be3"
+    >
+      <div>
+        <label for="name">Név</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          placeholder="pl. Harry James Potter"
+        />
+      </div>
+      <div>
+        <label for="dob">Születési dátum</label>
+        <input type="date" name="dob" id="dob" required />
+      </div>
+      <div class="houses">
+        <label>Ház</label>
+        <div class="house">
+          <input
+            type="radio"
+            name="house"
+            id="gryffindor-radio"
+            value="gryffindor"
+            data-color-primary="red"
+          />
+          <label for="gryffindor-radio">Griffendél</label>
+        </div>
+        <div class="house">
+          <input
+            type="radio"
+            name="house"
+            id="hufflepuff-radio"
+            value="hufflepuff"
+            data-color-primary="yellow"
+          />
+          <label for="hufflepuff-radio">Hugrabug</label>
+        </div>
+        <div class="house">
+          <input
+            type="radio"
+            name="house"
+            id="ravenclaw-radio"
+            value="ravenclaw"
+            data-color-primary="blue"
+          />
+          <label for="ravenclaw-radio">Hollóhát</label>
+        </div>
+        <div class="house">
+          <input
+            type="radio"
+            name="house"
+            id="slytherin-radio"
+            value="slytherin"
+            data-color-primary="green"
+          />
+          <label for="slytherin-radio">Mardekár</label>
+        </div>
+      </div>
+      <div>
+        <label>Jelszó</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          minlength="6"
+          pattern="[a-zA-Z0-9]*(([a-zA-Z][a-zA-Z0-9]*[0-9]) | ([0-9][a-zA-Z0-9]*[a-zA-Z]))[a-zA-Z0-9]*"
+          title="A jelszó nem felel meg a követelményeknek!"
+          required
+        />
+        <!-- Jelszó mégegyszer START -->
+        <label for="passwordAgain">Jelszó mégegyszer</label>
+        <input
+          type="password"
+          name="password"
+          id="passwordAgain"
+          minlength="6"
+          pattern="[a-zA-Z0-9]*(([a-zA-Z][a-zA-Z0-9]*[0-9])|([0-9][a-zA-Z0-9]*[a-zA-Z]))[a-zA-Z0-9]*"
+          title="A jelszó legalább 6 karaktert kell, hogy tartalmazzon. Csak az angol ábécé nagybetűi és számjegyek megengedettek. A jelszónak betűt és számjegyet is tartalmaznia kell."
+          required
+        />
+        <!-- Jelszó mégegyszer END -->
+      </div>
+      <div>
+        <label for="has-pet">Kijelentem, hogy van kisállatom.</label>
+        <input type="checkbox" name="has-pet" id="has-pet" value="yes" />
+        <fieldset class="conditional">
+          <legend>Kisállat</legend>
+          <label>
+            Faj
+            <input
+              type="text"
+              name="pet-species"
+              id="pet-species"
+              placeholder="pl. bagoly"
+            />
+          </label>
+          <label>
+            Név
+            <input
+              type="text"
+              name="pet-name"
+              id="pet-name"
+              placeholder="pl. Hedvig"
+            />
+          </label>
+        </fieldset>
+      </div>
+      <div>
+        <label for="number-of-wands">Varázspálcák száma</label>
+        <input
+          type="number"
+          name="number-of-wands"
+          id="number-of-wands"
+          min="0"
+          max="1"
+          required
+        />
+      </div>
+      <div>
+        <label for="email">Email cím</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="pl. hjp@hogwarts.ac.uk"
+          pattern=".+@hogwarts\.ac\.uk"
+          title="Egy @hogwarts.ac.uk végződésű email cím megadása kötelező."
+        />
+      </div>
+      <div>
+        <label>Megjegyzések</label>
+        <textarea
+          name="comments"
+          id="comments"
+          rows="5"
+          maxlength="200"
+          placeholder="pl. Benne szeretnék lenni a kviddics csapatban."
+        ></textarea>
+      </div>
+      <div>
+        <label for="photo">Fotó</label>
+        <input
+          type="file"
+          name="photo"
+          id="photo"
+          accept="image/png,image/jpeg"
+        />
+      </div>
+      <div>
+        <fieldset>
+          <legend>Meg akarod-e látogatni a Mágiaügyi Minisztériumot?</legend>
+          <div class="radio-buttons">
+            <div>
+              <input
+                type="radio"
+                name="attend-mom"
+                id="attend-mom-yes"
+                value="yes"
+              />
+              <label for="attend-mom-yes">Igen</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="attend-mom"
+                id="attend-mom-no"
+                value="no"
+              />
+              <label for="attend-mom-no">Nem</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div>
+        <button type="submit">Küldés</button>
+      </div>
+    </form>
+    <script src="script-extra-1012.js"></script>
+  </body>
+</html>

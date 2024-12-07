@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Roxforti regisztrációs űrlap</title>
+    <link rel="stylesheet" href="hogwarts-form-extra.css" />
+  </head>
+  <body>
+    <h1>Roxforti regisztrációs űrlap</h1>
+    <form
+      id="hogwarts-form"
+      class="fancy-form"
+      method="post"
+      enctype="multipart/form-data"
+      action="sajat_webhook_url"
+    >
+      <div>
+        <label for="name">Név</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          placeholder="pl. Harry James Potter "
+        />
+      </div>
+      <div>
+        <label for="dob">Születési dátum</label>
+        <input type="date" name="dob" id="dob" required />
+      </div>
+      <div>
+        <!-- Extra feladat (16-18) -->
+        <!-- <label for="randomHouse"
+        >A Teszlek Süvegre bízom a ház választását</label
+        > -->
+        <!-- <input type="checkbox" name="randomHouse" id="randomHouse" value="no" />
+        <label for="house">Ház</label> -->
+        <!-- END -->
+        <select name="house" id="house" required>
+          <!-- A data-color-ok vannak plusszba -->
+          <option value="">--Válassz egy lehetőséget--</option>
+          <option value="gryffindor" data-color-primary="red">
+            Griffendél
+          </option>
+          <option value="hufflepuff" data-color-primary="yellow">
+            Hugrabug
+          </option>
+          <option value="ravenclaw" data-color-primary="blue">Hollóhát</option>
+          <option value="slytherin" data-color-primary="green">Mardekár</option>
+        </select>
+        <!-- Radio button-os -->
+      </div>
+      <!-- Extra begin - password -->
+      <div>
+        <label for="password">Jelszó</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          minlength="6"
+          pattern="[a-zA-Z0-9]*(([a-zA-Z][a-zA-Z0-9]*[0-9])|([0-9][a-zA-Z0-9]*[a-zA-Z]))[a-zA-Z0-9]*"
+          title="A jelszó legalább 6 karaktert kell, hogy tartalmazzon. Csak az angol ábécé nagybetűi és számjegyek megengedettek. A jelszónak betűt és számjegyet is tartalmaznia kell."
+          required
+        />
+        <!-- Extra feladat (10-12) -->
+        <!-- <label for="passwordAgain">Jelszó mégegyszer</label>
+        <input
+          type="password"
+          name="password"
+          id="passwordAgain"
+          minlength="6"
+          pattern="[a-zA-Z0-9]*(([a-zA-Z][a-zA-Z0-9]*[0-9])|([0-9][a-zA-Z0-9]*[a-zA-Z]))[a-zA-Z0-9]*"
+          title="A jelszó legalább 6 karaktert kell, hogy tartalmazzon. Csak az angol ábécé nagybetűi és számjegyek megengedettek. A jelszónak betűt és számjegyet is tartalmaznia kell."
+          required
+        /> -->
+        <!-- END -->
+      </div>
+      <!-- Extra end -->
+      <div>
+        <label for="has-pet">Kijelentem, hogy van kisállatom.</label>
+        <input type="checkbox" name="has-pet" id="has-pet" value="yes" />
+        <fieldset class="conditional">
+          <legend>Kisállat</legend>
+          <label
+            >Faj<input type="text" name="pet-species" placeholder="pl. bagoly"
+          /></label>
+          <label
+            >Név<input type="text" name="pet-name" placeholder="pl. Hedvig"
+          /></label>
+        </fieldset>
+      </div>
+      <!-- Extra begin - varazspalcak -->
+      <div>
+        <label for="number-of-wands">Varázspálcák száma</label>
+        <input
+          type="number"
+          id="number-of-wands"
+          name="number-of-wands"
+          min="0"
+          value="1"
+          required
+        />
+      </div>
+      <!-- Extra end -->
+      <div>
+        <label for="email">Email cím</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          pattern=".+@hogwarts\.ac\.uk"
+          placeholder="pl. hjp@hogwarts.ac.uk"
+          title="Egy @hogwarts.ac.uk végződésű email cím megadása kötelező."
+        />
+      </div>
+      <div>
+        <label for="comments">Megjegyzések</label>
+        <textarea
+          name="comments"
+          id="comments"
+          rows="5"
+          maxlength="200"
+          placeholder="pl. Benne szeretnék lenni a kviddics csapatban."
+        ></textarea>
+      </div>
+      <!-- Extra begin - photo -->
+      <div>
+        <label for="photo">Fotó</label>
+        <input
+          type="file"
+          name="photo"
+          id="photo"
+          accept="image/png,image/jpeg"
+        />
+      </div>
+      <!-- Kép -->
+      <div>
+        <img src="potter.webp" alt="Harry Potter" />
+      </div>
+      <!-- Extra end -->
+      <!-- Extra begin - attend-mom -->
+      <div>
+        <fieldset>
+          <legend>Meg akarod-e látogatni a Mágiaügyi Minisztériumot?</legend>
+          <div class="radio-buttons">
+            <div>
+              <input
+                type="radio"
+                name="attend-mom"
+                id="attend-mom-yes"
+                value="yes"
+              />
+              <label for="attend-mom-yes">Igen</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="attend-mom"
+                id="attend-mom-no"
+                value="no"
+              />
+              <label for="attend-mom-no">Nem</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <!-- Extra end -->
+      <div>
+        <button type="submit">Küldés</button>
+      </div>
+    </form>
+    <script src="hogwarts-form-extra_hu.js"></script>
+  </body>
+</html>

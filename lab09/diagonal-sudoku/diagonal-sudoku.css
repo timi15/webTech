@@ -1,0 +1,37 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+table.sudoku {
+  border-collapse: collapse;
+  margin: auto;
+  border: medium solid black;
+}
+table.sudoku td {
+  border: thin solid lightgray;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  vertical-align: middle;
+}
+table.sudoku td:nth-child(3n) {
+  border-right: medium solid black;
+}
+table.sudoku tr:nth-child(3n) {
+  border-bottom: medium solid black;
+}
+
+table.sudoku tr:nth-child(9) > td:nth-child(9),
+table.sudoku tr:nth-child(9) > td:nth-child(1), table.sudoku tr:nth-child(8) > td:nth-child(8),
+table.sudoku tr:nth-child(8) > td:nth-child(2), table.sudoku tr:nth-child(7) > td:nth-child(7),
+table.sudoku tr:nth-child(7) > td:nth-child(3), table.sudoku tr:nth-child(6) > td:nth-child(6),
+table.sudoku tr:nth-child(6) > td:nth-child(4), table.sudoku tr:nth-child(5) > td:nth-child(5), 
+table.sudoku tr:nth-child(4) > td:nth-child(4),
+table.sudoku tr:nth-child(4) > td:nth-child(6), table.sudoku tr:nth-child(3) > td:nth-child(3),
+table.sudoku tr:nth-child(3) > td:nth-child(7), table.sudoku tr:nth-child(2) > td:nth-child(2),
+table.sudoku tr:nth-child(2) > td:nth-child(8), table.sudoku tr:nth-child(1) > td:nth-child(1),
+table.sudoku tr:nth-child(1) > td:nth-child(9) {
+  background-color: gold;
+}/*# sourceMappingURL=diagonal-sudoku.css.map */

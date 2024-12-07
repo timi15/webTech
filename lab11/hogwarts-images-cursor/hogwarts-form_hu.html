@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Roxforti regisztrációs űrlap</title>
+    <link rel="stylesheet" href="hogwarts-form.css" />
+  </head>
+  <body>
+    <h1>Roxforti regisztrációs űrlap</h1>
+    <form
+      class="fancy-form"
+      method="post"
+      enctype="multipart/form-data"
+      action="https://webhook.site/c15f6877-d498-415b-8224-091505577394"
+    >
+      <div>
+        <label for="name">Név</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          placeholder="pl. Harry James Potter "
+        />
+      </div>
+      <div>
+        <label for="dob">Születési dátum</label>
+        <input type="date" name="dob" id="dob" required />
+      </div>
+      <div>
+        <label for="house">Ház</label>
+        <select name="house" id="house" required>
+          <option value="">--Válassz egy lehetőséget--</option>
+          <option value="gryffindor">Griffendél</option>
+          <option value="hufflepuff">Hugrabug</option>
+          <option value="ravenclaw">Hollóhát</option>
+          <option value="slytherin">Mardekár</option>
+        </select>
+      </div>
+      <div>
+        <label for="has-pet">Kijelentem, hogy van kisállatom.</label>
+        <input type="checkbox" name="has-pet" id="has-pet" value="yes" />
+        <fieldset class="conditional">
+          <legend>Kisállat</legend>
+          <label
+            >Faj<input type="text" name="pet-species" placeholder="pl. bagoly"
+          /></label>
+          <label
+            >Név<input type="text" name="pet-name" placeholder="pl. Hedvig"
+          /></label>
+        </fieldset>
+      </div>
+      <div>
+        <label for="email">Email cím</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          pattern=".+@hogwarts\.ac\.uk"
+          placeholder="pl. hjp@hogwarts.ac.uk"
+          title="Egy @hogwarts.ac.uk végződésű email cím megadása kötelező."
+        />
+      </div>
+      <div>
+        <label for="comments">Megjegyzések</label>
+        <textarea
+          name="comments"
+          id="comments"
+          rows="5"
+          maxlength="200"
+          placeholder="pl. Benne szeretnék lenni a kviddics csapatban."
+        ></textarea>
+      </div>
+      <div>
+        <button type="submit">Küldés</button>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox playground</title>
+    <link rel="stylesheet" href="flexbox-playground.css">
+</head>
+
+<body>
+
+    <div id="container"></div>
+    <div id="controls">
+        <div>
+            <button id="add-item-btn">Add Item</button>
+        </div>
+        <div>
+            <button id="remove-item-btn">Remove Item</button>
+        </div>
+        <div>
+            <label for="flex-direction-select">flex-direction-select</label>
+            <select id="flex-direction-select">
+                <option value="initial"></option>
+                <option value="column">column</option>
+                <option value="column-reverse">column-reverse</option>
+                <option value="row">row</option>
+                <option value="row-reverse">row-reverse</option>
+            </select>
+        </div>
+        <div>
+            <label for="justify-content-select">justify-content-select</label>
+            <select id="justify-content-select">
+                <option value="initial"></option>
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+                <option value="center">center</option>
+                <option value="start">start</option>
+                <option value="end">end</option>
+                <option value="space-between">space-between</option>
+                <option value="space-around">space-around</option>
+                <option value="space-evenly">space-evenly</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="align-items-select">align-items-select</label>
+            <select id="align-items-select">
+                <option value="initial"></option>
+                <option value="flex-start">flex-start</option>
+                <option value="flex-edn">flex-end</option>
+                <option value="center">center</option>
+                <option value="end">end</option>
+                <option value="start">start</option>
+
+            </select>
+        </div>
+    </div>
+
+    <script src="flexbox-playground.js"></script>
+</body>
+
+</html>

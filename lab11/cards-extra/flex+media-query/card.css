@@ -1,0 +1,68 @@
+.card {
+    align-items: center;
+    background-color: white;
+    border: medium solid black;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    display: flex;
+    font-family: sans-serif;
+    height: 3.5in;
+    justify-content: space-between;
+    width: 2.5in;
+}
+
+/* Setting the color of the cards: */
+
+.card:is([data-suit=clubs], [data-suit=spades]) {
+    color: black;
+}
+
+.card:is([data-suit=diamonds], [data-suit=hearts]) {
+    color: red;
+}
+
+/* Adding card ranks: */
+
+.card[data-rank=A] span.rank::before {
+    content: "A";
+}
+
+/* Adding card suits: */
+
+.card[data-suit=spades] span.suit::before {
+    content: "\2660";
+}
+
+.card[data-suit=clubs] span.suit::before {
+    content: "\2663";
+}
+
+.card[data-suit=hearts] span.suit::before {
+    content: "\2665";
+}
+
+.card[data-suit=diamonds] span.suit::before {
+    content: "\2666";
+}
+
+/* Styling the top-left corner, center, and bottom-right corner of each card: */
+
+.card :is(.topLeft, .bottomRight) {
+    display: inline-block;
+    font-size: 200%;
+    padding: 0.25em;
+    text-align: center;
+}
+
+.card .center {
+    font-size: 400%;
+}
+
+.topLeft {
+    align-self: flex-start;
+}
+
+.bottomRight {
+    align-self: flex-end;
+    transform: rotate(0.5turn);
+}

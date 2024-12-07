@@ -1,0 +1,19 @@
+@import "cards.css";
+
+.cards{
+    display: flex;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topLeft{
+    align-self: flex-start;
+}
+
+.bottomRight{
+    align-self: flex-end;
+}

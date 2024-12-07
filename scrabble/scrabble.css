@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+
+table.scrabble {
+    border-collapse: collapse;
+    font-family: sans-serif;
+    margin: auto;
+    text-transform: uppercase;
+}
+
+table.scrabble td, table.scrabble th {
+    height: 3em;
+    text-align: center;
+    vertical-align: middle;
+    width: 3em;
+}
+
+table.scrabble th {
+    font-weight: normal;
+}
+
+table.scrabble td {
+    background-color: green;
+    border: medium solid black;
+    font-size: 60%;
+    text-transform: uppercase;
+}
+
+/* Triple word score (tws): */
+
+table.scrabble td.tws {
+    background-color: red;
+}
+
+table.scrabble td.tws::before {
+    content: "Triple word";
+}
+
+/* Double word score (dws): */
+
+table.scrabble td.dws {
+    background-color: pink;
+}
+
+table.scrabble td.dws::before {
+    content: "Double word";
+}
+
+table.scrabble td.dws.center::before {
+    content: "\2605";
+    font-size: 300%;
+}
+
+/* Triple letter score (tls): */
+
+table.scrabble td.tls {
+    background-color: blue;
+}
+
+table.scrabble td.tls::before {
+    content: "Triple letter";
+}
+
+/* Double letter score (dls): */
+
+table.scrabble td.dls {
+    background-color: lightblue;
+}
+
+table.scrabble td.dls::before {
+    content: "Double letter";
+}

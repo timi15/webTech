@@ -1,0 +1,12 @@
+#hogwarts-form {
+    max-width: 50%;
+    width: 400px;
+}
+
+form div.form-check:has(input[type=checkbox]) + fieldset.conditional {
+    display: none;
+}
+
+form div.form-check:has(input[type=checkbox]:checked) + fieldset.conditional {
+    display: block;
+}

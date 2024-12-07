@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="web-technologies.css">
+    <title>Web Technologies</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <hgroup>
+                <h1>Web Technoliges</h1>
+                <p>Last modified: <time datetime="2024-11-15">November 15, 2024</time></p>
+            </hgroup>
+        </header>
+
+        <nav id="toc">
+            <h2>Table of Contents</h2>
+            <ul class="toc">
+                <li>
+                    <a href="#json">
+                        JSON
+                    </a>
+                </li>
+                <li>
+                    <a href="#css">
+                        CSS
+                    </a>
+                </li>
+                <li>
+                    <a href="#html">
+                        HTML
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--article#json*3>h2>a^p+h3+ul>li>a^^h3+pre-->
+
+        <main>
+
+            <article id="json">
+                <h2>
+                    <a href="#json">JSON</a>
+                </h2>
+                <p>JavaScript Object Notation (JSON) is a lightweight, text-based, language-independent data interchange format.</p>
+                <h3>Specifications</h3>
+                <ul class="specs">
+                    <li>
+                        <a href="https://ecma-international.org/publications-and-standards/standards/ecma-404/">ECMA-404: The JSON Data Interchange Syntax</a>
+                    </li>
+                    <li>
+                        <a href="https://datatracker.ietf.org/doc/html/rfc8259">RFC 8259: The JavaScript Object Notation (JSON) Data Interchange Format</a>
+                    </li>
+                    <li>
+                        <a href="https://www.iso.org/standard/71616.html">ISO/IEC 21778:2017: Information technology&mdash;The JSON data interchange syntax</a>
+                    </li>
+                </ul>
+                </ul>
+                <h3>Sample Code</h3>
+                <pre>
+{
+    "title": "Batman Begins",
+    "year": 2005,
+    "rating": "PG-13",
+    "genres": ["action", "crime", "drama"]
+}
+                </pre>
+            </article>
+
+            <article id="css">
+                <h2>
+                    <a href="#css">CSS</a>
+                </h2>
+                <p>Cascading Style Sheets (CSS) is a language for describing the rendering of structured documents (such as HTML and XML) on a variety of media.</p>
+                <h3>Specifications</h3>
+                <ul class="specs">
+                    <li>
+                        <a href="https://www.w3.org/Style/CSS/current-work">The list of all CSS specifications</a>
+                    </li>
+                </ul>
+                <h3>Sample Code</h3>
+                <pre>
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+table.summary > tbody > tr:nth-child(odd) > td {
+    background-color: lightgray;
+}
+                </pre>
+            </article>
+
+            <article id="html">
+                <h2>
+                    <a href="#html"> HTML</a>
+                </h2>
+                <p>HTML is the World Wide Web's core markup language.</p>
+                <h3>Specifications</h3>
+                <ul class="specs">
+                    <li>
+                        <a href="https://html.spec.whatwg.org/">HTML Standard</a>
+                    </li>
+                </ul>
+                <h3>Sample Code</h3>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;Hello, World!&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Hello, World!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+            </article>
+
+        </main>
+
+        <footer>
+            <p class="legal">
+                <small>
+                    This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons “Attribution 4.0 International”</a> license.
+                </small>
+                <img src="https://licensebuttons.net/l/by/4.0/80x15.png" alt="CC BY 4.0 license logo" >
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

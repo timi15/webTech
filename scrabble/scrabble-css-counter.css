@@ -1,0 +1,27 @@
+@import "scrabble.css";
+
+/* Numbering rows: */
+
+table.scrabble > tbody {
+    counter-reset: row-number;
+}
+
+table.scrabble > tbody > tr {
+    counter-increment: row-number;
+}
+
+table.scrabble > tbody th::before {
+    content: counter(row-number, upper-alpha);
+}
+
+/* Numbering columns: */
+
+table.scrabble > thead, table.scrabble > tfoot {
+    counter-reset: column-number;
+}
+
+table.scrabble > thead th:not(:first-child):not(:last-child):before,
+table.scrabble > tfoot th:not(:first-child):not(:last-child)::before {
+    content: counter(column-number);
+    counter-increment: column-number;
+}

@@ -1,0 +1,30 @@
+@import "../extra/card.css";
+
+body {
+  margin: 0;
+  background-color: green;
+}
+
+.cards {
+  display: grid;
+  gap: 1em;
+  margin: 1em;
+}
+
+@media screen and (min-width: calc(5in + 3em)) {
+  .cards {
+    grid-template-columns: repeat(2, 2.5in);
+  }
+}
+
+@media screen and (min-width: calc(7.5in + 4em)) {
+  .cards {
+    grid-template-columns: repeat(3, 2.5in);
+  }
+}
+
+@media screen and (min-width: calc(10in + 5em)) {
+  .cards {
+    grid-template-columns: repeat(4, 2.5in);
+  }
+}

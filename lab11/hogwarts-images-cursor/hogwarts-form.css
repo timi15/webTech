@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+body {
+    font-family: "EB Garamond", serif;
+}
+
+h1 {
+    font-family: "Henny Penny", sans-serif;
+}
+
+form.fancy-form {
+    background-color: mintcream;
+    overflow: auto;
+    max-width: 50%;
+    width: 400px;
+}
+
+form.fancy-form div {
+    margin: 1em;
+}
+
+form.fancy-form label:has(+ :is(input, select, textarea)[required])::after {
+    content: "*";
+    color: red;
+    vertical-align: super;
+    font-size: small;
+}
+
+form.fancy-form input[type=checkbox]:not(:checked) + fieldset.conditional {
+    display: none;
+}
+
+form.fancy-form label {
+    display: block;
+}
+
+form.fancy-form :is(input, select, textarea) {
+    border: medium solid darkslateblue;
+    border-radius: 0.25em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form.fancy-form > div:has(button[type=submit]) {
+    text-align: center;
+}
+
+form.fancy-form button[type=submit] {
+    background-color: darkslateblue;
+    color: white;
+}
+
+form.fancy-form input[type=email]:invalid {
+    background-color: tomato;
+    color: white;
+}
+
+form.fancy-form :focus {
+    border-color: gold;
+    border-width: thick;
+}

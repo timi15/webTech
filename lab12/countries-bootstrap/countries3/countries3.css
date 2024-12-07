@@ -1,0 +1,7 @@
+.country-table td > img {
+    max-width: 4em;
+}
+
+span.tld {
+    font-family: monospace;
+}
